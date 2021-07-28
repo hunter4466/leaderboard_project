@@ -18,7 +18,6 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
-    addfunc: './src/Assets/Javascript/addfunc.js',
   },
   devServer: {
     contentBase: './dist',

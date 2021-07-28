@@ -3,7 +3,7 @@
 
 # Leaderboard project - project
 
-> Creating an To do list project.
+> Creating an leaderboard project to work on API.
 
 ![screenshot](./src/Assets/Images/Screenshots/preview1.png)
 

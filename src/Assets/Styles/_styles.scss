@@ -193,7 +193,8 @@
 }
 
 .form_input {
-  @include inputs.commonInput; }
+  @include inputs.commonInput;
+}
 
 .add_score_btn {
   @include buttons.commonBtn;

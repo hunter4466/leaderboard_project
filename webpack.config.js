@@ -7,7 +7,7 @@ module.exports = {
       config$: './configs/app-config.js',
       react: './vendor/react-master',
     },
-    extensions: ['', 'js', 'jsx'],
+    extensions: ["",".wasm", ".mjs", ".js", ".jsx", ".ts", ".tsx", ".json"],
     modules: [
       'node_modules',
       'bower_components',
@@ -18,13 +18,29 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
-    modules: './src/Assets/Javascript/modules.js',
+    addfunc: './src/Assets/Javascript/addfunc.js',
   },
   devServer: {
     contentBase: './dist',
   },
   module: {
     rules: [
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          // Creates `style` nodes from JS strings
+          "style-loader",
+          // Translates CSS into CommonJS
+          "css-loader",
+          // Compiles Sass to CSS
+          {
+            loader: "sass-loader",
+            options: {
+              webpackImporter: false,
+            },
+          },
+        ],
+      },
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],

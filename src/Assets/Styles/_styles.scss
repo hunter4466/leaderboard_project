@@ -102,29 +102,36 @@
   font-family: 'Lato10';
   src: url('../Fonts/Lato-ThinItalic.ttf');
 }
+
 @mixin tittleFont($size: 20px) {
   font-family: "Lato1", serif;
   font-size: $size;
 }
+
 @mixin buttonFont($size: 13px) {
   font-family: "Lato8", serif;
   font-size: $size;
 }
+
 @mixin itemText {
   margin-left: 5px;
   font-family: "Lato8", serif;
   margin-top: 5px;
 }
+
 ::-webkit-scrollbar {
   width: 10px;
 }
+
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: #f1f1f1;
 }
+
 ::-webkit-scrollbar-thumb {
   background: rgb(86, 133, 184);
   border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(45, 111, 182);
 }
@@ -136,46 +143,59 @@
 // ----------------------Leader Board----------------------
 .leader_board {
   @include boxes.styled-box;
+
   width: 25vw;
 }
+
 .top_leader {
   @include boxes.flexh;
 }
+
 .leader_tittle {
   @include boxes.tittle;
   @include tittleFont;
 }
-.refresh_btn{
- @include buttons.commonBtn;
- @include buttonFont;
+
+.refresh_btn {
+  @include buttons.commonBtn;
+  @include buttonFont;
 }
-.recent_scores_ul{
+
+.recent_scores_ul {
   @include boxes.innerBox;
+
   width: 20vw;
 }
+
 .leader_item {
   @include boxes.flexh;
+
   list-style: none;
 }
+
 .leader_name {
   @include itemText;
 }
+
 .leader_score {
   @include itemText;
 }
 // ----------------------Add your score----------------------
 .add_score {
   @include boxes.styled-box;
+
   width: 25vw;
 }
-.add_tittle{
+
+.add_tittle {
   @include boxes.tittle;
   @include tittleFont;
 }
-.form_input{
-  @include inputs.commonInput
-}
-.add_score_btn{
+
+.form_input {
+  @include inputs.commonInput; }
+
+.add_score_btn {
   @include buttons.commonBtn;
   @include buttonFont;
 }

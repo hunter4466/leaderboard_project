@@ -7,7 +7,7 @@ module.exports = {
       config$: './configs/app-config.js',
       react: './vendor/react-master',
     },
-    extensions: ["",".wasm", ".mjs", ".js", ".jsx", ".ts", ".tsx", ".json"],
+    extensions: ['', '.wasm', '.mjs', '.js', '.jsx', '.ts', '.tsx', '.json'],
     modules: [
       'node_modules',
       'bower_components',
@@ -29,12 +29,12 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: [
           // Creates `style` nodes from JS strings
-          "style-loader",
+          'style-loader',
           // Translates CSS into CommonJS
-          "css-loader",
+          'css-loader',
           // Compiles Sass to CSS
           {
-            loader: "sass-loader",
+            loader: 'sass-loader',
             options: {
               webpackImporter: false,
             },

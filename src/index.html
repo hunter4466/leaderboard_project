@@ -11,32 +11,18 @@
         <div class="leader_board">
             <div class="top_leader">
                 <h2 class="leader_tittle">Recent Scores</h2>
-                <button class="refresh_btn" type="button">Refresh</button>
+                <button id="refresh_btn" class="refresh_btn" type="button">Refresh</button>
               </div>
-              <ul class="recent_scores_ul">
-                <li class="leader_item">
-                    <p class="leader_name">Mario Chois</p><p class="leader_score">100</p>
-                </li>
-                <li class="leader_item">
-                   <p class="leader_name">Juan Gomez</p><p class="leader_score">87</p>
-                </li>
-                <li class="leader_item">
-                    <p class="leader_name">Daniel Perez</p><p class="leader_score">93</p>
-                </li>
-                <li class="leader_item">
-                    <p class="leader_name">Javier Vargas</p><p class="leader_score">85</p>
-                </li>
-                <li class="leader_item">
-                    <p class="leader_name">Pedro Egusquiza</p><p class="leader_score">97</p>
-                </li>
+              <ul id="recent_scores_ul" class="recent_scores_ul">
               </ul>
         </div>
-        <form class="add_score">
+        <div class="add_score">
             <h2 class="add_tittle">Add your score</h2>
-            <input class="form_input" type="text" placeholder="Your name">
-            <input class="form_input" type="text" placeholder="Your score">
-            <button class="add_score_btn" type="submit">Submit</button>
-        </form>
+            <input type="text" id="name_input" class="form_input" type="text" placeholder="Your name">
+            <input type="number" id="score_input" class="form_input" type="text" placeholder="Your score">
+            <h2 id="messageTag" class="messageTag"></h2>
+            <button id="submit_score_btn" class="add_score_btn" type="button">Submit</button>
+        </div>
     </section>
 </body>
 </html>

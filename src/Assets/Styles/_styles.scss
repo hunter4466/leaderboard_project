@@ -119,6 +119,13 @@
   margin-top: 5px;
 }
 
+@mixin notificationMsg {
+  font-family: "Lato3", serif;
+  font-size: 15px;
+  color: green;
+  margin-left: 5px;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -194,6 +201,10 @@
 
 .form_input {
   @include inputs.commonInput;
+}
+
+.messageTag {
+  @include notificationMsg;
 }
 
 .add_score_btn {

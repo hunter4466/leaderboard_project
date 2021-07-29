@@ -10,8 +10,7 @@ function setNewScore(val1, val2) {
         'Content-type': 'application/json; charset=UTF-8',
       },
     })
-      .then((response) => response.json())
-      .then((json) => console.log(json));
+      .then((response) => response.json());
     resolve('Saved Game');
   });
 }

@@ -2,31 +2,32 @@ import './Assets/Styles/_styles.scss';
 import './Assets/Styles/modules/_boxes.scss';
 import './Assets/Styles/modules/_buttons.scss';
 import './Assets/Styles/modules/_inputs.scss';
-import setScores from './Assets/Javascript/post.js';
-import getScores from './Assets/Javascript/get.js';
-import buildStructure from './Assets/Javascript/buildHTML.js';
-let submitScoreBtn = document.getElementById('submit_score_btn')
-let nameInput = document.getElementById('name_input')
-let scoreInput = document.getElementById('score_input')
-let refresh_btn = document.getElementById('refresh_btn')
-let messageTag = document.getElementById('messageTag')
+import setScores from './Assets/Javascript/post';
+import getScores from './Assets/Javascript/get';
+import buildStructure from './Assets/Javascript/buildHTML';
 
-function loadScores(){
-  let resultJSON = getScores();
-  resultJSON.then(function(data) {
+const submitScoreBtn = document.getElementById('submit_score_btn');
+const nameInput = document.getElementById('name_input');
+const scoreInput = document.getElementById('score_input');
+const refreshBtn = document.getElementById('refresh_btn');
+const messageTag = document.getElementById('messageTag');
+
+function loadScores() {
+  const resultJSON = getScores();
+  resultJSON.then((data) => {
     buildStructure(data.result);
   });
 }
 
-submitScoreBtn.addEventListener('click',(event)=>{
+submitScoreBtn.addEventListener('click', (event) => {
   event.preventDefault();
- setScores(nameInput.value,scoreInput.value)
-messageTag.innerHTML = "Score Added ✓"
-  setTimeout(()=>{messageTag.innerHTML = ""},1000) 
-})
-
-refresh_btn.addEventListener('click',(event)=>{
-  event.preventDefault();
- loadScores();
+  setScores(nameInput.value, scoreInput.value);
+  messageTag.innerHTML = 'Score Added ✓';
+  setTimeout(() => { messageTag.innerHTML = ''; }, 1000);
 });
-loadScores()
+
+refreshBtn.addEventListener('click', (event) => {
+  event.preventDefault();
+  loadScores();
+});
+loadScores();

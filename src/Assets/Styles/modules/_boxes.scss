@@ -1,7 +1,7 @@
 @mixin tittle($fsize: 20px) {
   font-size: $fsize;
   margin: 0;
-  color:rgb(70, 70, 70);
+  color: rgb(70, 70, 70);
 }
 
 @mixin flexv {

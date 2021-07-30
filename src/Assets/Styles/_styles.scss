@@ -145,6 +145,7 @@
 // ----------------------Tittle-------------------------------
 .tittle {
   @include tittleFont(30px);
+
   position: relative;
   color: white;
   left: -1vw;

@@ -30,4 +30,5 @@ refreshBtn.addEventListener('click', (event) => {
   event.preventDefault();
   loadScores();
 });
+
 loadScores();

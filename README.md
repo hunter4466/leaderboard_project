@@ -7,8 +7,6 @@
 
 ![screenshot](./src/Assets/Images/Screenshots/preview1.png)
 
-
-
 ## Built With
 
 - Html, Javascript, CSS

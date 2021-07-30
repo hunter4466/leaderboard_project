@@ -145,6 +145,16 @@
 // ----------------------Tittle-------------------------------
 .tittle {
   @include tittleFont(30px);
+
+  position: relative;
+  color: white;
+  left: -1vw;
+  top: -20px;
+  padding-top: 10px;
+  padding-left: 2vw;
+  width: 100vw;
+  height: 50px;
+  background-color: rgb(105, 140, 206);
 }
 
 // ----------------------Leader Board----------------------
